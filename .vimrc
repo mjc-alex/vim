@@ -56,7 +56,7 @@ setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 colorscheme gruvbox
 set background=light
-set number " 显示行号
+" set number " 显示行号
 set cursorline " 突出显示当前行
 "set ruler " 打开状态栏标尺
 set shiftwidth=2 " 设定 << 和 >> 命令移动时的宽度为 2
@@ -115,7 +115,7 @@ let g:UltiSnipsEditSplit="vertical"
 "   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 		Plug 'valloric/youcompleteme'
-		Plug 'vim-autoformat/vim-autoformat'	  
+"		Plug 'vim-autoformat/vim-autoformat'	  
 	 "markdown-preview
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 "	 filetype plugin on
@@ -132,7 +132,6 @@ let g:UltiSnipsEditSplit="vertical"
 call plug#end()
 
 set runtimepath+=~/.vim/plugged/ultisnips_rep
-set clipboard=unnamedplus
 let mapleader=";"
 "uickly insert an empty new line without entering insert mode
 	nnoremap <Leader>o o<Esc>
@@ -140,6 +139,9 @@ let mapleader=";"
 
 set completeopt-=preview
 hi Normal ctermbg = none
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap { {<CR>}<ESC>O<TAB>
+" inoremap " ""<ESC>i
+" inoremap ( ()<ESC>i
+"inoremap { {<CR>}<ESC>O<TAB>
+inoremap { {<CR>}<ESC>O
+set clipboard=unnamedplus
+
